@@ -52,6 +52,19 @@ var employees = [
 
 //Code Here
 
+function employeeUpdater(){
+  for (let i = 0; i < employees.length; i++){
+
+    if(employees[i].firstName === 'Lorie'){
+          console.log(employees[i].department)  
+      employees[i].department = 'HR'
+    }
+    else if(employees[i].firstName === 'Theo'){
+      employees.splice(i,1)
+    }
+  }
+  return employees;
+}
 
 
 ////////// PROBLEM 2 //////////
@@ -69,6 +82,29 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 */
 
 //Code Here
+
+let removeDuplicates = function(){
+  for (var i = 0; i< workplaceAccidents.length; i++){
+    for (var j = i+1; j< workplaceAccidents.length; j++){
+      if (workplaceAccidents[i] === workplaceAccidents[j]){
+           workplaceAccidents.splice(i, 1)
+           i--
+      }
+    }
+  }
+  return workplaceAccidents;
+}
+
+//removeDuplicates();
+
+//   let newArr = workplaceAccidents.slice();
+//   for (var i = newArr.length - 1; i >= 0; i--) {
+//    if (newArr.indexOf(newArr[i]) !== newArr.lastIndexOf(newArr[i])){
+//      newArr.splice(i, 1)
+//    }
+//    return newArr;
+//   }
+// }
 
 
 
@@ -97,8 +133,11 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+// var grumpyActivity[cat[0[0]]];
+// var fluffy2ndFriend;
+var grumpyActivity = cat.catFriends[0].activities[1];
+var fluffy2ndFriend = cat.catFriends[1].name;
+
 
 
 
@@ -140,6 +179,19 @@ var myCar = {
 
 //Code Here
 
+// var recordCleaner = function(){
+//   for atFaultForAccident in myCar.accidents{
+//     atFaultForAccident = false
+//   }
+
+// }
+var recordCleaner = function(){
+  for (let i = 0; i< myCar.accidents.length; i++){
+    if(myCar.accidents[i].atFaultForAccident === true)
+    myCar.accidents[i].atFaultForAccident = false
+  }
+}
+recordCleaner();
 
 
 ////////// PROBLEM 5 //////////
@@ -158,5 +210,27 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 */
 
 //Code Here
+// var looper = function(){
+//   for (let i = 0; i< numsArr.length; i++){
+//     for (let j = 0; j< numsArr.length; j++){
+//       if (numsArr[j] % 2 === 0){
+//         j = 'odd'; }
+//       else if (j % 2 === 0){
+//         j = 'even';}
+//       }
+//    }
+// }
+var looper = function(){
+  for (let i = 0; i< numsArr.length; i++){
+    for (let j = 0; j< numsArr[i].length; j++){
+      if (numsArr[i][j] % 2 === 1){
+        numsArr[i][j] = 'odd'; }
+      else {
+        numsArr[i][j] = 'even';
+      }
+    }
+  }
+  return numsArr;
+}
 
-
+//looper(numsArr);

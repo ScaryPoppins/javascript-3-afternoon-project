@@ -22,7 +22,10 @@ var carDetails = {
 */
 
 //Code Here
-
+let {color} = carDetails
+let {make} = carDetails
+let {model} = carDetails
+let {year} = carDetails
 
 
 ////////// PROBLEM 2 //////////
@@ -33,9 +36,19 @@ var carDetails = {
   The property names are firstName, lastName, and title.
 */
 
+
+// var cgreeting = {
+//   firstName: 'Mark',
+//   lastName: 'Nagel',
+//   title: 'Scrub',
+// }
+
+
 function greeting( obj ) {
   //Code Here
+ let {firstName, lastName, title} = obj
   
+
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -54,7 +67,16 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+function totalPopulation(obj){
+  let utahNum = obj.utah;
+  let californiaNum = obj.california;
+  let texasNum = obj.texas;
+  let arizonaNum = obj.arizona;
+  let totalNum = utahNum + californiaNum + texasNum + arizonaNum;
+  return totalNum;
+  //console.log(totalNum);
+  }
+  //totalPopulation(values);
 
 
 ////////// PROBLEM 4 //////////
@@ -67,8 +89,19 @@ function greeting( obj ) {
   Push these new variables to an array and return the array. 
 */
 
-//Code Here
+// var food = {
+// carb: 'string1'
+// fat: 'string2'
+// protein: 'string3'}
 
+//Code Here
+function ingredients(obj){
+  let carbStr = obj.carb;
+  let fatStr = obj.fat;
+  let protienStr = obj.protein;
+  let togetherStr = [carbStr, fatStr, protienStr]
+  return togetherStr;
+  }
 
 
 ////////// PROBLEM 5 //////////
